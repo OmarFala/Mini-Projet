@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
+import Logo from "../src/este.png";
+import home from "../src/home.png";
 import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -16,19 +18,20 @@ import StudentList from "./components/student-list.component";
 function App() {
   return (<Router>
     <div className="App">
+      <div>
+      <label><img src={home} width="100%wh" height="200px"></img></label></div>
       <header className="App-header">
         <Navbar bg="dark" variant="dark">
           <Container>
 
             <Navbar.Brand>
-              <Link to={"/create-student"} className="nav-link">
-                React MERN Stack App
-              </Link>
+            
+            
             </Navbar.Brand>
 
             <Nav className="justify-content-end">
               <Nav>
-                <Link to={"/create-student"} className="nav-link">
+                <Link to={"/create-student"} className="nav-link" >
                   Create Student
                 </Link>
               </Nav>
@@ -43,6 +46,11 @@ function App() {
                 <Link to={"/student-list"} className="nav-link">
                   Student List
                 </Link>
+              </Nav>
+              <Nav>
+              <Link to={"/create-student"} className="nav-link">
+                  Login
+              </Link>
               </Nav>
             </Nav>
 

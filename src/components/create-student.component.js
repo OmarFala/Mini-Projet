@@ -57,7 +57,7 @@ export default class CreateStudent extends Component {
     return (<div className="form-wrapper">
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Name">
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Nom Complet</Form.Label>
           <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName} />
         </Form.Group>
 
@@ -67,7 +67,7 @@ export default class CreateStudent extends Component {
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Roll No</Form.Label>
+          <Form.Label>CNE</Form.Label>
           <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
         </Form.Group>
 

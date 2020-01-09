@@ -83,14 +83,16 @@ export default class EditStudent extends Component {
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Roll No</Form.Label>
+          <Form.Label>CNE</Form.Label>
           <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
         </Form.Group>
 
-        <Button variant="danger" size="lg" block="block" type="submit">
+        <Button variant="danger" size="lg" block="block" type="submit" >
           Update Student
         </Button>
       </Form>
     </div>);
+        window.location="http://localhost:3000/student-list";
+
   }
 }

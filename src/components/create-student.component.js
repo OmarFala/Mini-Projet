@@ -55,26 +55,26 @@ export default class CreateStudent extends Component {
 
   render() {
     return (<div className="form-wrapper">
-      <Form onSubmit={this.onSubmit}>
-        <Form.Group controlId="Name">
-          <Form.Label>Nom Complet</Form.Label>
-          <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName} />
-        </Form.Group>
+    <Form onSubmit={this.onSubmit}>
+      <Form.Group controlId="Name">
+        <Form.Label>Nom Complet</Form.Label>
+        <Form.Control required type="text" value={this.state.name} onChange={this.onChangeStudentName} />
+      </Form.Group>
 
-        <Form.Group controlId="Email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
-        </Form.Group>
+      <Form.Group controlId="Email">
+        <Form.Label>Email</Form.Label>
+        <Form.Control required type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
+      </Form.Group>
 
-        <Form.Group controlId="Name">
-          <Form.Label>CNE</Form.Label>
-          <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
-        </Form.Group>
+      <Form.Group controlId="Name">
+        <Form.Label>CNE</Form.Label>
+        <Form.Control required type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
+      </Form.Group>
 
-        <Button variant="danger" size="lg" block="block" type="submit">
-          Create Student
-        </Button>
-      </Form>
-    </div>);
+      <Button variant="danger" size="lg" block="block" type="submit">
+        Ajouter Etudiant
+      </Button>
+    </Form>
+  </div>);
   }
 }

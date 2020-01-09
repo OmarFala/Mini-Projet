@@ -17,6 +17,7 @@ export default class StudentTableRow extends Component {
             }).catch((error) => {
                 console.log(error)
             })
+            window.location="http://localhost:3000/student-list";
     }
 
     render() {
@@ -27,11 +28,14 @@ export default class StudentTableRow extends Component {
                 <td>{this.props.obj.rollno}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-student/" + this.props.obj._id}>
-                        Edit
+                        Modifier
                     </Link>
-                    <Button onClick={this.deleteStudent} size="sm" variant="danger">Delete</Button>
+                    
+
+                    <Button onClick={this.deleteStudent} size="sm" variant="danger">suprimer</Button>
                 </td>
             </tr>
         );
+
     }
 }

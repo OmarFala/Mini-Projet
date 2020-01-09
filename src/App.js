@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import Logo from "../src/este.png";
 import home from "../src/home.png";
+import login from './components/login';
 import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -48,7 +49,7 @@ function App() {
                 </Link>
               </Nav>
               <Nav>
-              <Link to={"/create-student"} className="nav-link">
+              <Link to={"/login"} className="nav-link">
                   Login
               </Link>
               </Nav>
@@ -67,6 +68,7 @@ function App() {
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
+                <Route path="/login" component={login}/>
               </Switch>
             </div>
           </Col>

@@ -51,6 +51,7 @@ export default class CreateStudent extends Component {
       email: '',
       rollno: ''
     });
+    alert("etudiant ajouté");
   }
 
   render() {

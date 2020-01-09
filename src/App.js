@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CreateStudent from "./components/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
+import enregister from './components/enregister';
 
 function App() {
   return (<Router>
@@ -33,19 +34,18 @@ function App() {
             <Nav className="justify-content-end">
               <Nav>
                 <Link to={"/create-student"} className="nav-link" >
-                  Create Student
+                  ajouter etudiant
                 </Link>
               </Nav>
 
-              {/* <Nav>
-                <Link to={"/edit-student/:id"} className="nav-link">
-                  Edit Student
-                </Link>
-              </Nav> */}
-
               <Nav>
                 <Link to={"/student-list"} className="nav-link">
-                  Student List
+                  Liste étudiants
+                </Link>
+              </Nav>
+              <Nav>
+                <Link to={"/enregister"} className="nav-link">
+                  Registre
                 </Link>
               </Nav>
               <Nav>
@@ -66,8 +66,8 @@ function App() {
               <Switch>
                 <Route exact path='/' component={CreateStudent} />
                 <Route path="/create-student" component={CreateStudent} />
-                <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
+                <Route path="/enregister" component={enregister} />
                 <Route path="/login" component={login}/>
               </Switch>
             </div>
